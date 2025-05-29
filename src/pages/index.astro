@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Tecnologias from '../components/tecnologias.astro'
+import Menu from "../components/menu.astro";
+---
+
+<Layout title="hola">
+	<div class="bg-yellow-50 h-screen">
+		<video
+			src="/back.mp4"
+			autoplay
+			muted
+			loop
+			playsinline
+			style="width: 100%; height: auto;"
+			class="absolute z-0 w-full h-full object-cover"></video>
+		<div class="relative z-10 pt-5 h-full">
+		<Menu></Menu>
+			<div class="w-screen relative z-10 mt-10 grid grid-cols-2">
+				<div></div>
+				<div>
+					<div class="bg-white w-2xl rounded-2xl p-3">
+						<img
+							src="/favicon.svg"
+							class="bg-amber-300"
+							width="100px"
+							alt=""
+						/>
+						<div>
+							<p>hola , mi nombre es josue</p>
+						</div>
+					</div>
+					<Tecnologias></Tecnologias>
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout>
