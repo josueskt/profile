@@ -1,0 +1,50 @@
+---
+const { title , image , review , spans = []} = Astro.props;
+---
+
+<div
+  class="card max-w-sm rounded opacity-0 translate-y-10 transition-all duration-1000 ease-out overflow-hidden shadow-lg bg-white m-3"
+>
+  <img
+    class="w-full bg-amber-200"
+    src={image}
+    alt="Sunset in the mountains"
+  />
+  <div class="px-6 py-4">
+    <div class="font-bold text-xl mb-2">{title}</div>
+    <p class="text-gray-700 text-base">{review}</p>
+  </div>
+  <div class="px-6 pt-4 pb-2">
+    {spans.map((item: string) => (
+      <span
+        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+      >
+        {item}
+      </span>
+    ))}
+  </div>
+</div>
+
+<script >
+  const cards = document.querySelectorAll(".card");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove("opacity-0", "translate-y-10");
+          entry.target.classList.add("opacity-100", "translate-y-0");
+        } else {
+          entry.target.classList.remove("opacity-100", "translate-y-0");
+          entry.target.classList.add("opacity-0", "translate-y-10");
+        }
+     
+      });
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+
+  cards.forEach((card) => observer.observe(card));
+</script>

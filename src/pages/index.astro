@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Tecnologias from "../components/tecnologias.astro";
 import Menu from "../components/menu.astro";
+import Cardproyect from "../components/cardproyect.astro";
 ---
 
 <Layout title="home">
@@ -23,90 +24,137 @@ import Menu from "../components/menu.astro";
 			class="fixed top-0 right-10 md:right-0 md:left-auto left-0 w-screen h-screen object-[30%_center] md:object-center object-cover z[-1"
 		></video>
 		<div class="relative z-10 pt-5 h-full">
-			<!-- <Menu /> -->
+			<div></div>
 			<div class="w-full relative z-10 mt-10 grid md:grid-cols-2">
-				<div class="rounded-2xl">
-					<!-- <video src="/back.mp4" autoplay loop class=" overflow-hidden w-full"></video> -->
-				</div>
+				<div class="rounded-2xl"></div>
 				<div class="">
-					<div class="bg-white    rounded-2xl p-3 sm:flex">
-						<div
-							class="flex sm:justify-start justify-center sm:flex-auto"
+					<div class="flex">
+						<svg
+							class="w-12 h-12"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="#607d8b"
+							stroke-width="1"
+							stroke-linecap="round"
+							stroke-linejoin="round"
 						>
-							<img
-								src="/profile.jpg"
-								class="bg-amber-300 h-full max-h-60 bor flex rounded-full"
-								alt=""
-							/>
-						</div>
-						<div class="flex-1/2 p-5 bg-white ">
-							<h1 class="text-6xl ">Welcome</h1>
-							<p>
-								Mi nombre es Stiven Mantuano
-							</p>
+							<path d="M3 12h4.5l1.5 -6l4 12l2 -9l1.5 3h4.5"
+							></path>
+							<h1 class="p-0 m-0 text-5xl text-white">
+								Bienvenido
+							</h1>
+						</svg>
+					</div>
+					<hr class="bg-white" />
+					<div
+						class="bg-cyan-700/30 backdrop-blur-sm shadow-xl my-6 sm:mr-3 rounded-2xl p-3 sm:flex"
+					>
+						<div class="flex-1/2">
+							<h1 class="text-6xl">Stiven Mantuano</h1>
+							<p></p>
 						</div>
 					</div>
+
 					<Tecnologias />
+					<div
+						class="bg-cyan-700/30 backdrop-blur-sm shadow-xl my-6 sm:mr-3 rounded-2xl p-3 sm:flex"
+					>
+						<div class="flex flex-row">
+							<svg
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="#607d8b"
+								stroke-width="1"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="w-20 h-20"
+							>
+								<path
+									d="M16 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+								></path>
+								<path
+									d="M12 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+								></path>
+								<path
+									d="M12 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+								></path>
+								<path d="M12 15v-6"></path>
+								<path d="M15 11l-2 -2"></path>
+								<path d="M11 7l-1.9 -1.9"></path>
+								<path
+									d="M13.446 2.6l7.955 7.954a2.045 2.045 0 0 1 0 2.892l-7.955 7.955a2.045 2.045 0 0 1 -2.892 0l-7.955 -7.955a2.045 2.045 0 0 1 0 -2.892l7.955 -7.955a2.045 2.045 0 0 1 2.892 0z"
+								></path>
+							</svg>
+							<h1 class="text-3xl">Git hub</h1>
+							<a href="" class="no-underline text-2xl">
+								https://github.com/josueskt
+							</a>
+						</div>
+					</div>
+
+					<div></div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div
-		class="  relative  bg-gray-800      bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:15px_15px] bg-fixed [--pattern-fg:gray] "
+		class="relative bg-gray-800 bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:15px_15px] bg-fixed [--pattern-fg:gray]"
 	>
+		<div
+			class="bg-white text-center sm:mx-52 mx-5 rounded mt-3 text-4xl font-bold"
+		>
+			PROYECTOS
+		</div>
+		<div
+			class="pt-4 flex flex-wrap justify-center items-center sm:flex-row flex-col"
+		>
+			<Cardproyect
+				spans={["Sistema publico"]}
+				title="Biblioteca yavirac"
+				image="/proyectos/biblioteca/biblioteca_login.png"
+				review="Sistema bibliotecario para el instituto yavirac"
+			/>
+			<Cardproyect
+				spans={["Sistema privado"]}
+				title="Portal Epsilaco"
+				image="/proyectos/portalEp/home.png"
+				review="Portal de tramites de la empresa privada epsilaco de revicion vehicular"
+			/>
+		</div>
 
-	<div class="  bg-white text-center mx-52 mt-3 text-4xl font-bold">
-		PROYECTOS
-
+		<!-- bg-[image:radial-gradient(black_3px,_transparent_0)] bg-fixed bg-[size:30px_30px]    relative  -->
 	</div>
-	<div class="pt-4 flex space-x-5">
-<div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-  <img class="w-full bg-amber-200" src="/favicon.svg"  alt="Sunset in the mountains">
-  <div class="px-6 py-4">
-    <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-    <p class="text-gray-700 text-base">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-    </p>
-  </div>
-  <div class="px-6 pt-4 pb-2">
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-  </div>
-</div>
+	<div
+		class="relative bg-gray-800 bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:15px_15px] bg-fixed [--pattern-fg:gray]"
+	>
+		<div>
+			<div class="bg-white text-center mx-5 rounded text-4xl font-bold">
+				Intereses
+			</div>
 
-<div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-  <img class="w-full bg-amber-200" src="/favicon.svg"  alt="Sunset in the mountains">
-  <div class="px-6 py-4">
-    <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-    <p class="text-gray-700 text-base">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-    </p>
-  </div>
-  <div class="px-6 pt-4 pb-2">
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-  </div>
-</div>
-
+			<div class="flex flex-wrap flex-row px-52">
+				<p class="bg-white/35 text-6xl rounded-4xl p-3 text-black">
+					backend
+				</p>
+				<p class="bg-white/35 text-6xl rounded-4xl p-3 text-black">
+					backend
+				</p>
+				<p class="bg-white/35 text-6xl rounded-4xl p-3 text-black">
+					backend
+				</p>
+				<p class="bg-white/35 text-6xl rounded-4xl p-3 text-black">
+					backend
+				</p>
+				<p class="bg-white/35 text-6xl rounded-4xl p-3 text-black">
+					backend
+				</p>
+				<p class="bg-white/35 text-6xl rounded-4xl p-3 text-black">
+					backend
+				</p>
+			</div>
+			<div class=" text-end w-full ">
+				<p class="text-4xl pr-10  bg-amber-400">Contactame : </p>
+			</div>
+		</div>
 	</div>
-	<!-- bg-[image:radial-gradient(black_3px,_transparent_0)] bg-fixed bg-[size:30px_30px]    relative  -->
-		
-	</div>
-
-	
-
-
-	<!-- <div class=" h-112 bg-white
-	  bg-[image:repeating-linear-gradient(0deg,_blue_0px,_blue_1px,_transparent_1px,_transparent_30px),_repeating-linear-gradient(90deg,_blue_0px,_blue_1px,_transparent_1px,_transparent_30px)]
-	  bg-[size:20px_20px]
-	  bg-fixed
-	  relative
-	  w-full
-	  
-	">
-	</div> -->
-
-	
 </Layout>
