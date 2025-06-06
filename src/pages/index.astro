@@ -5,8 +5,8 @@ import Menu from "../components/menu.astro";
 import Cardproyect from "../components/cardproyect.astro";
 ---
 
-<Layout title="home">
-	<div class="bg-yellow-50 h-screen w-screen">
+<Layout title="home" class="snap-y">
+	<div class="bg-yellow-50 h-screen w-screen  snap-center">
 		<!-- <video
 			src="/back.mp4"
 			autoplay
@@ -23,7 +23,7 @@ import Cardproyect from "../components/cardproyect.astro";
 			playsinline
 			class="fixed top-0 right-10 md:right-0 md:left-auto left-0 w-screen h-screen object-[30%_center] md:object-center object-cover z[-1"
 		></video>
-		<div class="relative z-10 pt-5 h-full">
+		<div id="seccion1" class="relative z-10 pt-5 h-full ">
 			<div></div>
 			<div class="w-full relative z-10 mt-10 grid md:grid-cols-2">
 				<div class="rounded-2xl"></div>
@@ -41,7 +41,7 @@ import Cardproyect from "../components/cardproyect.astro";
 							<path d="M3 12h4.5l1.5 -6l4 12l2 -9l1.5 3h4.5"
 							></path>
 							<h1 class="p-0 m-0 text-5xl text-white">
-								Bienvenido
+								Bienvenido!
 							</h1>
 						</svg>
 					</div>
@@ -50,14 +50,15 @@ import Cardproyect from "../components/cardproyect.astro";
 						class="bg-cyan-700/30 backdrop-blur-sm shadow-xl my-6 sm:mr-3 rounded-2xl p-3 sm:flex"
 					>
 						<div class="flex-1/2">
-							<h1 class="text-6xl">Stiven Mantuano</h1>
-							<p></p>
+							<h1 class="text-6xl p-0 m-0 text-white">Stiven Mantuano </h1>
+							<hr class="text-white">
+							<p class="text-white">Soy una persona sencilla que disfruta de dasarrollar aplicaciones  web</p>
 						</div>
 					</div>
 
 					<Tecnologias />
 					<div
-						class="bg-cyan-700/30 backdrop-blur-sm shadow-xl my-6 sm:mr-3 rounded-2xl p-3 sm:flex"
+						class="bg-red-800/30 backdrop-blur-sm shadow-xl my-6 sm:mr-3 rounded-2xl p-3 sm:flex"
 					>
 						<div class="flex flex-row">
 							<svg
@@ -85,10 +86,11 @@ import Cardproyect from "../components/cardproyect.astro";
 									d="M13.446 2.6l7.955 7.954a2.045 2.045 0 0 1 0 2.892l-7.955 7.955a2.045 2.045 0 0 1 -2.892 0l-7.955 -7.955a2.045 2.045 0 0 1 0 -2.892l7.955 -7.955a2.045 2.045 0 0 1 2.892 0z"
 								></path>
 							</svg>
-							<h1 class="text-3xl">Git hub</h1>
-							<a href="" class="no-underline text-2xl">
+							<h1 class="text-3xl pr-1 text-white">Git hub: </h1>
+							<a href="https://github.com/josueskt" class="text-3x1 text-white  hover:text-blue-950 m-auto no-underline text-2xl  text-black">
 								https://github.com/josueskt
 							</a>
+
 						</div>
 					</div>
 
@@ -98,9 +100,9 @@ import Cardproyect from "../components/cardproyect.astro";
 		</div>
 	</div>
 	<div
-		class="relative bg-gray-800 bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:15px_15px] bg-fixed [--pattern-fg:gray]"
+		class="relative snap-end bg-gray-800 bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:15px_15px] bg-fixed [--pattern-fg:gray]"
 	>
-		<div
+		<div id="seccion2" 
 			class="bg-white text-center sm:mx-52 mx-5 rounded mt-3 text-4xl font-bold"
 		>
 			PROYECTOS
@@ -113,7 +115,8 @@ import Cardproyect from "../components/cardproyect.astro";
 				title="Biblioteca yavirac"
 				image="/proyectos/biblioteca/biblioteca_login.png"
 				review="Sistema bibliotecario para el instituto yavirac"
-			/>
+				/>
+				<!-- url="/proyectos/bibliotecayavirac" -->
 			<Cardproyect
 				spans={["Sistema privado"]}
 				title="Portal Epsilaco"
@@ -125,36 +128,51 @@ import Cardproyect from "../components/cardproyect.astro";
 		<!-- bg-[image:radial-gradient(black_3px,_transparent_0)] bg-fixed bg-[size:30px_30px]    relative  -->
 	</div>
 	<div
-		class="relative bg-gray-800 bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:15px_15px] bg-fixed [--pattern-fg:gray]"
+		class="relative snap-start bg-gray-800 bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:15px_15px] bg-fixed [--pattern-fg:gray]"
 	>
-		<div>
-			<div class="bg-white text-center mx-5 rounded text-4xl font-bold">
-				Intereses
-			</div>
+	
+	<div class="bg-white text-center mx-5 rounded text-4xl font-bold">
+		Intereses
+	</div>
+		<div class="flex flex-wrap justify-center">
 
-			<div class="flex flex-wrap flex-row px-52">
-				<p class="bg-white/35 text-6xl rounded-4xl p-3 text-black">
-					backend
+			<div class="flex flex-wrap flex-row sm:px-52">
+				<p class="bg-white/35 text-2xl rounded-4xl p-3 text-black">
+					Desarrollo de  backend
 				</p>
-				<p class="bg-white/35 text-6xl rounded-4xl p-3 text-black">
-					backend
+				<p class="bg-white/35 text-2xl rounded-4xl p-3 text-black">
+					Sql
 				</p>
-				<p class="bg-white/35 text-6xl rounded-4xl p-3 text-black">
-					backend
+					<p class="bg-white/35 text-2xl rounded-4xl p-3 text-black">
+					Diseño 3D
 				</p>
-				<p class="bg-white/35 text-6xl rounded-4xl p-3 text-black">
-					backend
-				</p>
-				<p class="bg-white/35 text-6xl rounded-4xl p-3 text-black">
-					backend
-				</p>
-				<p class="bg-white/35 text-6xl rounded-4xl p-3 text-black">
-					backend
-				</p>
+			
 			</div>
-			<div class=" text-end w-full ">
-				<p class="text-4xl pr-10  bg-amber-400">Contactame : </p>
+			<div class=" flex w-full sm:justify-end justify-center ">
+				 <div class="bg-amber-400 sm:pr-5 p-2 m-5 rounded-2xl "><p>Informacion de contacto:</p>
+					<div class=" flex ">
+<svg
+  width="32"
+  height="32"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="#607d8b"
+  stroke-width="1"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 18h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5" />
+  <path d="M3 6l9 6l9 -6" />
+  <path d="M15 18h6" />
+  <path d="M18 15l3 3l-3 3" />
+</svg>
+
+						<p class="m-auto">Correo : stivenmantuanoz@gmail.com</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </Layout>
+
+

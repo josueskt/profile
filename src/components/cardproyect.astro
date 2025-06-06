@@ -1,5 +1,5 @@
 ---
-const { title , image , review , spans = []} = Astro.props;
+const { title , image , review , spans = [], url } = Astro.props;
 ---
 
 <div
@@ -22,6 +22,9 @@ const { title , image , review , spans = []} = Astro.props;
         {item}
       </span>
     ))}
+  </div>
+  <div class=" flex justify-end ">
+    <a class="font-bold bg-cyan-600  no-underline   text-black  rounded border-0 m-5 text-center p-2 hover:w-28 hover:bg-cyan-800 transition-all duration-300 cursor-pointer " href={url}> ver proyecto</a>
   </div>
 </div>
 

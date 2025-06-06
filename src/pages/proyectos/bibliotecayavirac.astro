@@ -1,0 +1,45 @@
+---
+import Cardproyect from "../../components/cardproyect.astro";
+import Menu from "../../components/menu.astro";
+import Tecnologias from "../../components/tecnologias.astro";
+import Layout from "../../layouts/Layout.astro";
+
+
+---
+<Layout title="biblioteca yavirac">
+<div class=" h-screen bg-gray-200 ">
+<Menu></Menu>
+
+<div class="  grid sm:grid-cols-2  ">
+    <div><img class="w-full" src="/proyectos/biblioteca/biblioteca_login.png" alt=""></div>
+    <div class="bg-gray-300 mt-3 flex flex-col sm:flex-col-reverse  ">
+        <a href="https://bibliotecayavirac.com/#/login" class="no-underline text-white bg-cyan-600 p-3 border-0 m-auto rounded text-center "> Ir a la pagina del proyecto</a>
+
+          <div>
+              <h1>
+            Informacion del proyecto
+
+        </h1>
+        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima repudiandae nemo corporis eum officia! Praesentium animi velit impedit facere rem vitae ipsum explicabo qui omnis. Quae rerum quasi iusto tempora.</p>
+        <div class="">
+            <h2>
+                Teconologias usada : 
+
+            </h2>
+            <div>
+                <Tecnologias> </Tecnologias> 
+            </div>
+            <div class=" m-0 ">
+        <a href="https://bibliotecayavirac.com/#/login" class="no-underline text-white bg-cyan-600 p-3 border-0 m-auto rounded text-center "> Ver en git hub</a>
+
+            </div>
+        </div>
+    </div>
+    </div>
+  
+</div>
+
+
+
+</div>
+</Layout>
